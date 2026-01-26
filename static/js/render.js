@@ -244,7 +244,7 @@ class QBinViewer {
     }
 
     async loadContent(meta) {
-        const contentType = meta.contentType;
+        const contentType = meta.contentType || 'text/plain; charset=UTF-8';
         const contentLength = meta.contentLength;
         if (meta.title) {
             this.title = decodeURIComponent(meta.title);
